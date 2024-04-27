@@ -24,6 +24,17 @@ async def main():
 
 
 if __name__ == "__main__":
+    """
+    The main coroutine is the entry point for the program. It creates five tasks by calling the worker coroutine with 
+    different task numbers (n) and random delays.
+    
+    The tasks are created using asyncio.create_task and stored in a list (tasks).
+    
+    The asyncio.gather function is used to run all the tasks concurrently and wait for them to complete. 
+    The return_exceptions=True argument ensures that any exceptions raised by the tasks are propagated to the results list.
+    
+    After all tasks have completed, the results list contains the return values (task numbers) from each task.
+    """
     start_time = time.time()
     asyncio.run(main())
     end_time = time.time()
