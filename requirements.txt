@@ -1,1 +1,2 @@
-ruff
+ruff==0.4.2
+pykka==4.0.2
